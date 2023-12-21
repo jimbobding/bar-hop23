@@ -21,6 +21,7 @@ const ModalRegister: React.FC<LogoutMessageProps> = ({
     document.body.classList.remove("active-modal");
   }
   //JWT data persist
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [userData, setUserData] = useState<UserData>({
     f_name: "",
     l_name: "",
