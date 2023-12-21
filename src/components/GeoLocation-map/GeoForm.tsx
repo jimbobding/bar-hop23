@@ -4,7 +4,9 @@ import {
   faScaleBalanced,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
+// import { parse, icon } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from "react";
 
 import { useAppSelector } from "../../store";
 import {
@@ -19,6 +21,7 @@ const GeoForm = () => {
   const userWeight = useAppSelector(selectUserWeight);
   const userDropdown = useAppSelector(selectUserDropdown);
   const userTime = useAppSelector(selectUserTime);
+  const [calsBun] = useState<number | string>("");
 
   return (
     <>
