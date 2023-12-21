@@ -11,6 +11,7 @@ type LatLngLiteral = google.maps.LatLngLiteral;
 type MapOptions = google.maps.MapOptions;
 
 const GeoLocationMap = () => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [clickedMarker, setClickedMarker] = useState<
     | google.maps.places.PlaceResult
     | { formatted_address?: string }
@@ -18,6 +19,7 @@ const GeoLocationMap = () => {
     | undefined
   >(null);
   const [directions, setDirections] = useState<DirectionsResult | null>(null);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [destination, setDestination] = useState<string | null>(null);
   const [stepDisplay, setStepDisplay] = useState<google.maps.InfoWindow | null>(
     null,

@@ -154,19 +154,14 @@ const WaypointMap = () => {
     setCalsLost1(calsLost1);
   };
 
-  // console.log(mins());
-
-  // total calories of journey divide by the number of waypoints
-  // const calslostDividedByWaypoint = calsLost1;
-
   //hours and minutes const
   const hours = Math.floor(journeyTime / 3600);
   const minutes = Math.floor((journeyTime % 3600) / 60);
 
-  console.log("leg way", leg?.steps);
-
   useEffect(() => {
     initMap();
+    console.log("leg way", leg?.steps);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   }, []);
 
   return (
