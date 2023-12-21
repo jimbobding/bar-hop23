@@ -161,7 +161,6 @@ const WaypointMap = () => {
 
   useEffect(() => {
     initMap();
-    console.log("leg way", leg?.steps);
   }, []);
 
   return (
