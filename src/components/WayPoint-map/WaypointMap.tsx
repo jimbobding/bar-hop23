@@ -23,6 +23,7 @@ const WaypointMap = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [numOfWaypoints, setNumOfWayoints] = useState<number>(0);
   const [journeyTime, setJourneyTime] = useState<number>(0);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [leg, setLeg] = useState<google.maps.DirectionsLeg | null>(null);
 
   const options = useMemo<MapOptions>(
