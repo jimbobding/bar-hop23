@@ -161,6 +161,7 @@ const WaypointMap = () => {
 
   useEffect(() => {
     initMap();
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     console.log("leg way", leg?.steps);
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
   }, []);
