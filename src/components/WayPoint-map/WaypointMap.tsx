@@ -20,6 +20,7 @@ const WaypointMap = () => {
 
   let totalDuration = 0;
   const [calsLost1, setCalsLost1] = useState<number>(0);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [numOfWaypoints, setNumOfWayoints] = useState<number>(0);
   const [journeyTime, setJourneyTime] = useState<number>(0);
   const [leg, setLeg] = useState<google.maps.DirectionsLeg | null>(null);
