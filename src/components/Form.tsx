@@ -4,13 +4,11 @@ import {
   faScaleBalanced,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
-// import { parse, icon } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FormEventHandler, useState } from "react";
 
 import { useAppDispatch } from "../store";
 import {
-  setUserCalsBun,
   setUserDropdown,
   setUserName,
   setUserTime,

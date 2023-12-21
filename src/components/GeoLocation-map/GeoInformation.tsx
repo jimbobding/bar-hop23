@@ -49,14 +49,6 @@ const GeoInformation: React.FC<GeoInformationProps> = ({ leg }) => {
     if (leg.duration?.value === undefined) return "no duration";
     else return (leg.duration?.value / 60).toString();
   };
-  const hours = () => {
-    if (leg.duration?.value === undefined) return "no duration";
-    else return (leg.duration?.value / 60 / 60).toString();
-  };
-  const miles = () => {
-    if (leg.distance?.value === undefined) return "no distance";
-    else return Math.floor((leg.distance?.value / 1000) * 0.621371);
-  };
 
   const parsedMins = Math.floor(parseFloat(mins() || "0"));
 

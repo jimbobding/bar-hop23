@@ -3,7 +3,6 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { useAppSelector } from "../../store";
 import { selectUserName } from "../../store/form/formSelectors";
-import { setUserName } from "../../store/form/formSlice";
 import GeoInformation from "./GeoInformation";
 import Loading from "./Loading";
 

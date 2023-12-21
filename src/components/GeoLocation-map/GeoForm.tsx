@@ -21,7 +21,6 @@ const GeoForm = () => {
   const userWeight = useAppSelector(selectUserWeight);
   const userDropdown = useAppSelector(selectUserDropdown);
   const userTime = useAppSelector(selectUserTime);
-  const [calsBun, setCalsBun] = useState<number | string>("");
 
   return (
     <>
