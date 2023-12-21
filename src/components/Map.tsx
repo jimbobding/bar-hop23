@@ -16,13 +16,13 @@ const Map = () => {
   const [origin, setOrigin] = useState<string>("");
   const [destination, setDestination] = useState<string>("");
   const [directions, setDirections] = useState<DirectionsResult | undefined>(
-    undefined
+    undefined,
   );
 
   const mapRef = useRef<google.maps.Map | null>(null);
   const center = useMemo<LatLngLiteral>(
     () => ({ lat: 53.483959, lng: -2.244644 }),
-    []
+    [],
   );
 
   // Map options // Use memo so options do not render unless changed
@@ -32,7 +32,7 @@ const Map = () => {
       disableDefaultUI: true,
       clickableIcons: false,
     }),
-    []
+    [],
   );
 
   const onLoad = useCallback((map: google.maps.Map) => {
@@ -55,7 +55,7 @@ const Map = () => {
         if (status === "OK" && result) {
           setDirections(result);
         }
-      }
+      },
     );
   };
 

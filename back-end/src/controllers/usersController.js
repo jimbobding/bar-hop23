@@ -20,7 +20,7 @@ export const createUser = async (req, res) => {
       age,
       email,
       file_path,
-      hashedPass
+      hashedPass,
     );
     if (user === undefined) {
       return res
@@ -140,7 +140,7 @@ export const loginEmailPass = async (req, res) => {
 
     const isPasswordCorrect = await bcrypt.compare(
       trimmedPassword,
-      trimmedHashedPassword
+      trimmedHashedPassword,
     );
     console.log("Is password correct?", isPasswordCorrect);
 

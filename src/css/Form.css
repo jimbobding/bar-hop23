@@ -120,5 +120,9 @@ select {
 
 .about-link:hover {
   color: black;
-  text-shadow: -1px 0 pink, 0 1px pink, 1px 0 pink, 0 -1px pink;
+  text-shadow:
+    -1px 0 pink,
+    0 1px pink,
+    1px 0 pink,
+    0 -1px pink;
 }

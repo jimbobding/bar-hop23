@@ -37,7 +37,7 @@ const About = () => {
   };
 
   const handleGetSpeed = (
-    event: React.MouseEvent<HTMLDivElement, MouseEvent>
+    event: React.MouseEvent<HTMLDivElement, MouseEvent>,
   ) => {
     event.preventDefault();
     const weightValue = parseFloat(weight);
@@ -55,7 +55,7 @@ const About = () => {
   };
 
   const handleGetSpeedMin = (
-    event: React.MouseEvent<HTMLDivElement, MouseEvent>
+    event: React.MouseEvent<HTMLDivElement, MouseEvent>,
   ) => {
     event.preventDefault();
     const weightValue = parseFloat(weight);

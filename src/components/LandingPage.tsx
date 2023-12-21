@@ -51,7 +51,7 @@ const LandingPage = () => {
     try {
       console.log("User ID before API request:", userId);
       const response = await axios.get(
-        `http://localhost:3000/image/${userId}/image`
+        `http://localhost:3000/image/${userId}/image`,
       );
       console.log("userId", userId);
       console.log("url", `http://localhost:3000/image/${userId}/image`);

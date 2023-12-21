@@ -36,7 +36,7 @@ const Form = () => {
   };
 
   const handleGetSpeed = (
-    event: React.MouseEvent<HTMLDivElement, MouseEvent>
+    event: React.MouseEvent<HTMLDivElement, MouseEvent>,
   ) => {
     event.preventDefault();
     const weightValue = parseFloat(weight);

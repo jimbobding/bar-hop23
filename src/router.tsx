@@ -12,10 +12,10 @@ const LandingPage = React.lazy(() => import("./components/LandingPage"));
 const About = React.lazy(() => import("./components/About"));
 const FormMap = React.lazy(() => import("./components/FormMap"));
 const GeoLocationFormMap = React.lazy(
-  () => import("./components/GeoLocation-map/GeoLocationFormMap")
+  () => import("./components/GeoLocation-map/GeoLocationFormMap"),
 );
 const WaypointFormMap = React.lazy(
-  () => import("./components/WayPoint-map/WaypointFormMap")
+  () => import("./components/WayPoint-map/WaypointFormMap"),
 );
 const Login = React.lazy(() => import("./components/Login"));
 const Registration = React.lazy(() => import("./components/Registration"));
@@ -63,8 +63,8 @@ const router = createBrowserRouter(
         path={PageRoutes.Registration}
         element={<PageWrapper page={<Registration />} />}
       />
-    </Route>
-  )
+    </Route>,
+  ),
 );
 
 export default router;

@@ -19,7 +19,7 @@ export function renderComponent(
     store = createTestStore(initialState),
     route,
     ...options
-  }: RenderOptionsWithStore = {}
+  }: RenderOptionsWithStore = {},
 ) {
   if (route) {
     window.history.pushState({}, "Test Page", route);

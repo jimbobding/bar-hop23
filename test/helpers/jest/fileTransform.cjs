@@ -14,7 +14,7 @@ module.exports = {
       // Based on how SVGR generates a component name:
       // https://github.com/smooth-code/svgr/blob/01b194cf967347d43d4cbe6b434404731b87cf27/packages/core/src/state.js#L6
       const pascalCaseFilename = startCase(
-        camelCase(path.parse(filename).name)
+        camelCase(path.parse(filename).name),
       ).replace(/ /g, "");
       const componentName = `Svg${pascalCaseFilename}`;
 

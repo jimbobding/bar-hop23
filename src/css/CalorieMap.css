@@ -2,8 +2,18 @@ User html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    Helvetica Neue,
+    sans-serif;
 }
 
 a {
@@ -72,7 +82,9 @@ a {
   height: 80vh;
   border: pink 3px solid;
   padding-bottom: 20px;
-  box-shadow: -20px 0 35px -25px black, 20px 0 35px -25px pink;
+  box-shadow:
+    -20px 0 35px -25px black,
+    20px 0 35px -25px pink;
 }
 
 .highlight {

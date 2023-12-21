@@ -6,5 +6,5 @@ const selectUserState = (state: RootState) => state.user;
 
 export const selectUserName = createSelector(
   [selectUserState],
-  (userState) => userState.name
+  (userState) => userState.name,
 );

@@ -44,7 +44,11 @@ nav {
 
 .items:hover {
   color: #000000;
-  text-shadow: -1px 0 pink, 0 1px pink, 1px 0 pink, 0 -1px pink;
+  text-shadow:
+    -1px 0 pink,
+    0 1px pink,
+    1px 0 pink,
+    0 -1px pink;
 }
 
 .btn {

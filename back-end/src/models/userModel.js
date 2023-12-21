@@ -6,7 +6,7 @@ export const createUser = async (
   age,
   email,
   pic,
-  hashedPass
+  hashedPass,
 ) => {
   const emailExistsQuery = "SELECT * FROM bh_users WHERE email = $1";
   const emailExistsResult = await db.query(emailExistsQuery, [email]);

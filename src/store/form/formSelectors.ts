@@ -6,20 +6,20 @@ const selectFormState = (state: RootState) => state.form;
 
 export const selectUserName = createSelector(
   [selectFormState],
-  (formState) => formState.name
+  (formState) => formState.name,
 );
 
 export const selectUserWeight = createSelector(
   [selectFormState],
-  (formState) => formState.weight
+  (formState) => formState.weight,
 );
 
 export const selectUserTime = createSelector(
   [selectFormState],
-  (formState) => formState.time
+  (formState) => formState.time,
 );
 
 export const selectUserDropdown = createSelector(
   [selectFormState],
-  (formState) => formState.dropdown
+  (formState) => formState.dropdown,
 );

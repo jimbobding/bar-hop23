@@ -30,7 +30,7 @@ const WaypointMap = () => {
       disableDefaultUI: true,
       clickableIcons: false,
     }),
-    []
+    [],
   );
 
   function initMap(): void {
@@ -41,7 +41,7 @@ const WaypointMap = () => {
       {
         zoom: 14,
         center: { lat: 53.483959, lng: -2.244644 },
-      }
+      },
     );
 
     directionsRenderer.setMap(map);
@@ -50,16 +50,16 @@ const WaypointMap = () => {
       "click",
       () => {
         calculateAndDisplayRoute(directionsService, directionsRenderer);
-      }
+      },
     );
 
     function calculateAndDisplayRoute(
       directionsService: google.maps.DirectionsService,
-      directionsRenderer: google.maps.DirectionsRenderer
+      directionsRenderer: google.maps.DirectionsRenderer,
     ) {
       const waypts: google.maps.DirectionsWaypoint[] = [];
       const checkboxArray = document.getElementById(
-        "waypoints"
+        "waypoints",
       ) as HTMLSelectElement;
 
       for (let i = 0; i < checkboxArray.length; i++) {
@@ -86,7 +86,7 @@ const WaypointMap = () => {
 
           const route = response.routes[0];
           const summaryPanel = document.getElementById(
-            "directions-panel"
+            "directions-panel",
           ) as HTMLElement;
 
           summaryPanel.innerHTML = "";
@@ -121,7 +121,7 @@ const WaypointMap = () => {
               const parsedWeight = parseFloat(userWeight);
               const parsedMins = Math.floor(parseFloat(mins() || "0"));
               const calsLost = Math.floor(
-                ((parsedDropdown * 3.5 * parsedWeight) / 200) * parsedMins
+                ((parsedDropdown * 3.5 * parsedWeight) / 200) * parsedMins,
               );
               const distanceText = leg.distance?.text || "Unknown distance";
 
@@ -149,7 +149,7 @@ const WaypointMap = () => {
 
     // Calculate calsLost1 using totalDuration
     const calsLost1 = Math.floor(
-      ((parsedDropdown * 3.5 * parsedWeight) / 200) * (duration / 60)
+      ((parsedDropdown * 3.5 * parsedWeight) / 200) * (duration / 60),
     );
     setCalsLost1(calsLost1);
   };

@@ -17,7 +17,7 @@ const Distance: React.FC<DistanceProps> = ({ leg }) => {
   const userDropdown = useAppSelector(selectUserDropdown);
   const [isOpen, setIsOpen] = useState(false);
   const [formattedInstructions, setFormattedInstructions] = useState<string[]>(
-    []
+    [],
   );
 
   function toggle() {
@@ -32,7 +32,7 @@ const Distance: React.FC<DistanceProps> = ({ leg }) => {
       //Instructions array is mapped over and uses regEx to replpace the html tags
       // with empty strings
       const formatted = instructions.map((instruction) =>
-        instruction.replace(/<[^>]+>/g, "")
+        instruction.replace(/<[^>]+>/g, ""),
       );
       setFormattedInstructions(formatted);
     }
@@ -63,7 +63,7 @@ const Distance: React.FC<DistanceProps> = ({ leg }) => {
   const parsedMins = Math.floor(parseFloat(mins() || "0"));
 
   const calsLost = Math.floor(
-    ((parsedDropdown * 3.5 * parsedWeight) / 200) * parsedMins
+    ((parsedDropdown * 3.5 * parsedWeight) / 200) * parsedMins,
   );
 
   // If calsLost returns NaN it will return an empty string

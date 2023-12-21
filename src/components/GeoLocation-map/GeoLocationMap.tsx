@@ -21,15 +21,15 @@ const GeoLocationMap = () => {
   const [directions, setDirections] = useState<DirectionsResult | null>(null);
   const [destination, setDestination] = useState<string | null>(null);
   const [stepDisplay, setStepDisplay] = useState<google.maps.InfoWindow | null>(
-    null
+    null,
   );
   const userName = useAppSelector(selectUserName);
   const [userLocation, setUserLocation] = useState({ lat: 0, lng: 0 });
   const directionsServiceRef = useRef<google.maps.DirectionsService | null>(
-    null
+    null,
   );
   const directionsRendererRef = useRef<google.maps.DirectionsRenderer | null>(
-    null
+    null,
   );
 
   const mapRef = useRef<google.maps.Map | null>(null);
@@ -45,7 +45,7 @@ const GeoLocationMap = () => {
       disableDefaultUI: true,
       clickableIcons: false,
     }),
-    []
+    [],
   );
 
   useEffect(() => {
@@ -60,7 +60,7 @@ const GeoLocationMap = () => {
         (error) => {
           console.error("Error getting geolocation:", error);
           setLoading(false); // Set loading to false even if geolocation fails
-        }
+        },
       );
     } else {
       console.error("Geolocation is not supported by this browser.");
@@ -74,7 +74,7 @@ const GeoLocationMap = () => {
       | google.maps.places.PlaceResult
       | { formatted_address?: string | undefined }
       | null
-      | undefined
+      | undefined,
   ) => {
     if (!userLocation || !clickedMarker || !clickedMarker.formatted_address) {
       return;
@@ -99,7 +99,7 @@ const GeoLocationMap = () => {
             setDirections(result);
             console.log("result legs ", result.routes[0].legs);
           }
-        }
+        },
       );
 
       // Request for distance matrix
@@ -208,7 +208,7 @@ const GeoLocationMap = () => {
           request,
           (
             results: google.maps.places.PlaceResult[] | null,
-            status: google.maps.places.PlacesServiceStatus
+            status: google.maps.places.PlacesServiceStatus,
           ) => {
             if (
               status === google.maps.places.PlacesServiceStatus.OK &&
@@ -218,11 +218,11 @@ const GeoLocationMap = () => {
                 createMarker(results[i]);
               }
             }
-          }
+          },
         );
       }
     },
-    [loading, stepDisplay, userLocation]
+    [loading, stepDisplay, userLocation],
   );
 
   // Loading page to be shown whilst map is loading
